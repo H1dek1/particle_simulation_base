@@ -1,6 +1,6 @@
-set term gif animate delay 1
+set term gif animate delay 10
 set output "anim.gif"
-max_iter = 999
+max_iter = 99
 
 set xrange[-1:1]
 set yrange[-1:1]

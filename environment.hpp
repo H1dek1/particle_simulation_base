@@ -8,7 +8,7 @@
 
 class Environment{
   private:
-    static constexpr int NUM_PARTICLES = 20;
+    static constexpr int NUM_PARTICLES = 5;
     std::array<Particle, NUM_PARTICLES> particle;
     
     std::ofstream fout;

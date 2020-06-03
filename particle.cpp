@@ -14,7 +14,7 @@ Particle::Particle()
   std::random_device rnd;
   std::mt19937 mt( rnd() );
   std::uniform_real_distribution<> init_pos(-1, 1);
-  std::uniform_real_distribution<> init_vel(-2, 2);
+  std::uniform_real_distribution<> init_vel(-1, 1);
   x = init_pos(mt);
   y = init_pos(mt);
   v_x = init_vel(mt);

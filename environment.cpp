@@ -29,9 +29,7 @@ void Environment::run()
   const int    MAX_ITER = int(MAX_TIME / DT);
   const int    OUT_ITER = int(OUT_TIME / DT);
 
-  for(auto p : particle){
-    //std::cout << p.getX() << std::endl;
-  }
+  /* main iteration */
   for(int iter = 0; iter < MAX_ITER; iter++){
     for(int id = 0; id < particle.size(); id++){
       particle[id].update(DT);
@@ -40,13 +38,9 @@ void Environment::run()
     //  p.update(DT);
     //}
 
-    output();
+    if(iter%OUT_ITER == 0) output();
   }
 
-  std::cout << "----------------" << std::endl;
-  for(auto p : particle){
-    //std::cout << p.getX() << std::endl;
-  }
 }
 
 #endif //ENVIRONMENT
