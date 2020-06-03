@@ -32,7 +32,6 @@ void Environment::run()
   for(auto p : particle){
     //std::cout << p.getX() << std::endl;
   }
-  //particle[0].update(DT);
   for(int iter = 0; iter < MAX_ITER; iter++){
     for(int id = 0; id < particle.size(); id++){
       particle[id].update(DT);
