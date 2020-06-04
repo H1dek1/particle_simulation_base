@@ -21,6 +21,16 @@ void Environment::output()
   fout << std::endl;
 }
 
+void Environment::update(double dt)
+{
+    for(int id = 0; id < particle.size(); id++){
+      particle[id].update(dt);
+    }
+    //for(auto & p : particle){
+    //  p.update(dt);
+    //}
+}
+
 void Environment::run()
 {
   const double DT       = 1.0e-2;
@@ -31,13 +41,7 @@ void Environment::run()
 
   /* main iteration */
   for(int iter = 0; iter < MAX_ITER; iter++){
-    for(int id = 0; id < particle.size(); id++){
-      particle[id].update(DT);
-    }
-    //for(auto & p : particle){
-    //  p.update(DT);
-    //}
-
+    update(DT);
     if(iter%OUT_ITER == 0) output();
   }
 

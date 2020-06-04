@@ -20,6 +20,7 @@ class Environment{
   public:
     void run();
     void output();
+    void update(double dt);
 };
 
 #endif //ENVIRONMENT_H
